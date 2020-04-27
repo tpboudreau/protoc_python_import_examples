@@ -1,0 +1,7 @@
+
+syntax = "proto2";
+
+message A {
+  required int32 id = 1;
+}
+

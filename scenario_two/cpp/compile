@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -x
+
+g++ -I/opt/protobuf/include -I./generated -c generated/a.pb.cc
+g++ -I/opt/protobuf/include -I./generated -c generated/b.pb.cc
+g++ -I/opt/protobuf/include -I./generated -o main main.cc b.pb.o a.pb.o -L/opt/protobuf/lib -lprotobuf -lprotoc
+

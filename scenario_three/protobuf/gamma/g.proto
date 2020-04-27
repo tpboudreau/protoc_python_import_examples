@@ -1,0 +1,12 @@
+
+syntax = "proto2";
+
+package alpha.beta;
+
+import "delta/d.proto";
+
+message G {
+  required int32 id = 1;
+  required D d = 2;
+}
+

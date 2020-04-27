@@ -1,0 +1,14 @@
+
+syntax = "proto2";
+
+package alpha.beta;
+
+import "delta/d.proto";
+import "eta/zeta/z.proto";
+
+message G {
+  required int32 id = 1;
+  required D d = 2;
+  required Z z = 3;
+}
+
