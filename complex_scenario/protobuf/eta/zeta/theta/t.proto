@@ -9,8 +9,8 @@ import "eta/zeta/z.proto";
 
 message T {
   required int32 id = 1;
-  required D d = 2;
-  required E e = 3;
-  required Z z = 4;
+  optional D d = 2;
+  optional E e = 3;
+  optional Z z = 4;
 }
 

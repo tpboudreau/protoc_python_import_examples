@@ -7,6 +7,6 @@ import "delta/d.proto";
 
 message G {
   required int32 id = 1;
-  required D d = 2;
+  optional D d = 2;
 }
 
