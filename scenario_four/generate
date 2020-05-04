@@ -2,15 +2,15 @@
 
 set -x
 
-# Generate a "system" library (in a non-stadard location) that our project will refer to:
+# Generate a "system" library that our project will refer to:
 pushd system
 ./generate
 popd
 
 # Generate C++ and Python code for our project, "zeta", changing the
-# generated Python impurt statement for the internal project message module
-# to include an explicit relative import, while leaving the genenated import
-# statement for the system package unchanged :
+# generated Python import statement for the internal project message module
+# to include an explicit relative import, while leaving the generated import
+# statement for the system package unchanged:
 protoc \
   --proto_path './system:./protobuf' \
   --cpp_out cpp/generated \
