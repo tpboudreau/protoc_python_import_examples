@@ -2,7 +2,9 @@
 
 set -x
 
-protoc --proto_path ./protobuf --cpp_out ./cpp protobuf/common/library/*.proto
-
-protoc --proto_path ./protobuf --python_out ./python protobuf/common/library/*.proto
+protoc \
+  --proto_path . \
+  --cpp_out .  \
+  --python_out . \
+  common/library/*.proto
 

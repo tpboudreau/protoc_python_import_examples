@@ -2,7 +2,7 @@
 
 set -x
 
-#protoc --proto_path ./protobuf --cpp_out cpp/generated protobuf/*/*.proto
+protoc --proto_path ./protobuf --cpp_out cpp/generated protobuf/*/*.proto
 
 protoc --proto_path ./protobuf --python_out python/alpha/beta --python_opt 'replace_import_package=delta|alpha.beta.delta' protobuf/*/*.proto
 
