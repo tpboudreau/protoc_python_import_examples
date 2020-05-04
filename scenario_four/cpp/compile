@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -x
+
+# Compile the "system" object (this would probably already be in a library)
+g++ -I/opt/protobuf/include -I../system/cpp -c ../system/cpp/common/library/l.pb.cc
+
+# Compile the project
+g++ -I/opt/protobuf/include -I../system/cpp -I./generated -c generated/m.pb.cc
+g++ -I/opt/protobuf/include -I../system/cpp -I./generated -c generated/n.pb.cc
+g++ -I/opt/protobuf/include -I../system/cpp -I./generated -o main main.cc l.pb.o m.pb.o n.pb.o -L/opt/protobuf/lib -lprotobuf -lprotoc
+

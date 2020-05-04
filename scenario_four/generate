@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -x
+
+pushd system
+./generate
+popd
+
+protoc --proto_path './system/protobuf:./protobuf' --cpp_out cpp/generated protobuf/*.proto
+
+protoc --proto_path './system/protobuf:./protobuf' --python_out python/zeta --python_opt 'replace_import_package=|.' protobuf/*.proto
+

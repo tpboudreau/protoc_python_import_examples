@@ -1,9 +1,7 @@
 
 syntax = "proto2";
 
-package alpha.beta;
-
-message E {
+message L {
   required int32 id = 1;
 }
 

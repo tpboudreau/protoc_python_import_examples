@@ -1,0 +1,14 @@
+
+syntax = "proto2";
+
+package zeta;
+
+import "common/library/l.proto";
+import "n.proto";
+
+message M {
+  required int32 id = 1;
+  optional L l = 2;
+  optional N n = 3;
+}
+

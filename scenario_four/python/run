@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Ordinarily we'd expect the system packages to already be found on the
+# PYTHONPATH and no extension would be necessary.  In this example, we
+# create a new "system" package in a non-standard location, so we have
+# to extend the PYTHONPATH to run the example.
+export PYTHONPATH="../system/python:$PYTHONPATH"
+
+python3.6 main.py
+
