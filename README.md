@@ -1,6 +1,6 @@
 ##### This repo contains example usage scenarios for the proposed protoc replace_import_package Python option
 
-Four scenarios in which you might want to use the new `replace_import_package` option include (runnable code demonstrating these use cases can be found [here](https://github.com/tpboudreau/protoc_python_import_examples)):
+Four scenarios in which you might want to use the new `replace_import_package` option include:
 
 1. Your protobuf files are all in the same directory and at least one imports another; you would like the generated Python files to be created in a package directory.  Since there is no directory structure for the input files, protoc ordinarily produces Python import statements of the form `import M as m` (relying on the PYTHONPATH or implicit relative import), but you want to instruct it to produce import statements of the form `from . import M as m` (denoting explicit relative import enforced in Python3).
 
