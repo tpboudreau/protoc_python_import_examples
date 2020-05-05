@@ -1,4 +1,3 @@
-##### This repo contains example usage scenarios for the proposed protoc replace_import_package Python option
 
 Four scenarios in which you might want to use the new `replace_import_package` option include:
 
@@ -23,5 +22,3 @@ Four scenarios in which you might want to use the new `replace_import_package` o
 4. Your protobuf files are all in the same logical package, (say "project"), at least one imports another message file within that package, but it also imports a standard message file (say, "google/protobuf/timestamp.proto").  You would like to place the protoc generated Python code in a directory that reflects its logical package and have the intra-package imports work, while leaving the standard message import statements (which work as generated) alone.
 
 > *Example command:* `protoc --proto_path ./protobuf --python_out ./project --python_opt 'replace_import_package=|project' protobuf/*.proto`  
-
----
